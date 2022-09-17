@@ -1,200 +1,64 @@
-<h1 id="argon-design-system"><a href="https://www.creative-tim.com/product/vue-argon-design-system">Vue Argon Design System</a></h1>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p><img src="https://s3.amazonaws.com/creativetim_bucket/products/92/original/opt_argon_vue_thumbnail.jpg?1534236902" alt="Product Gif" /></p>
+<p align="center">
+<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-<p>Start your development with a Design System for Bootstrap 4. It is open source, free and it features many components that can help you create amazing websites.</p>
+## About Laravel
 
-<h4 id="fully-coded-components">Fully Coded Components</h4>
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-<p>Vue Argon Design System is built with over 100 individual components, giving you the freedom of choosing and combining. All components can take variations in colour, that you can easily modify using SASS files.</p>
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-<p>You will save a lot of time going from prototyping to full-functional code, because all elements are implemented. This Design System is coming with prebuilt examples, so the development process is seamless, switching from our pages to the real website is very easy to be done.</p>
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-<p>Every element has multiple states for colors, styles, hover, focus, that you can easily access and use.</p>
+## Learning Laravel
 
-<h4 id="complex-documentation">Complex Documentation</h4>
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-<p>Each element is well presented in a very complex documentation. You can read more about the idea behind this design system here. You can check the components here and the foundation here.</p>
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-<h4 id="example-pages">Example Pages</h4>
+## Laravel Sponsors
 
-<p>If you want to get inspiration or just show something directly to your clients, you can jump start your development with our pre-built example pages. You will be able to quickly set up the basic structure for your web project.</p>
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-<h2 id="table-of-contents">Table of Contents</h2>
+### Premium Partners
 
-<ul>
-  <li><a href="#demo">Demo</a></li>
-  <li><a href="#quick-start">Quick Start</a></li>
-  <li><a href="#documentation">Documentation</a></li>
-  <li><a href="#file-structure">File Structure</a></li>
-  <li><a href="#browser-support">Browser Support</a></li>
-  <li><a href="#resources">Resources</a></li>
-  <li><a href="#reporting-issues">Reporting Issues</a></li>
-  <li><a href="#technical-support-or-questions">Technical Support or Questions</a></li>
-  <li><a href="#licensing">Licensing</a></li>
-  <li><a href="#useful-links">Useful Links</a></li>
-</ul>
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Cubet Techno Labs](https://cubettech.com)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[Many](https://www.many.co.uk)**
+- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
+- **[DevSquad](https://devsquad.com)**
+- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
+- **[OP.GG](https://op.gg)**
+- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
+- **[Lendio](https://lendio.com)**
 
-<h2 id="demo">Demo</h2>
+## Contributing
 
-<ul>
-  <li><a href="https://demos.creative-tim.com/vue-argon-design-system">Index Page</a></li>
-  <li><a href="https://demos.creative-tim.com/vue-argon-design-system/#/landing">Landing page</a></li>
-  <li><a href="https://demos.creative-tim.com/vue-argon-design-system/#/profile">Profile Page</a></li>
-  <li><a href="https://demos.creative-tim.com/vue-argon-design-system/#/login">Login Page</a></li>
-  <li><a href="https://demos.creative-tim.com/vue-argon-design-system/#/register">Register Page</a></li>
-</ul>
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-<p><a href="https://demos.creative-tim.com/argon-design-system">View More</a></p>
+## Code of Conduct
 
-<h2 id="quick-start">Quick start</h2>
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-<ul>
-  <li><a href="https://github.com/creativetimofficial/vue-argon-design-system/archive/master.zip">Download from Github</a>.</li>
-  <li><a href="https://www.creative-tim.com/product/vue-argon-design-system">Download from Creative Tim</a>.</li>
-  <li>Clone the repo: <code class="highlighter-rouge">git clone https://github.com/creativetimofficial/vue-argon-design-system.git</code>.</li>
-</ul>
+## Security Vulnerabilities
 
-<h2 id="documentation">Documentation</h2>
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-<p>The documentation for the Vue Argon Design System is hosted at our <a href="https://demos.creative-tim.com/vue-argon-design-system">website</a>.</p>
+## License
 
-<h2 id="file-structure">File Structure</h2>
-
-<p>Within the download you’ll find the following directories and files:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>argon/
-|-- vue-argon-design-system
-    |-- App.vue
-    |-- main.js
-    |-- router.js
-    |-- assets
-    |   |-- scss
-    |   |   |-- argon.scss
-    |   |   |-- bootstrap
-    |   |   |-- custom
-    |   |-- vendor
-    |       |-- font-awesome
-    |       |   |-- css
-    |       |   |   |-- font-awesome.css
-    |       |   |   |-- font-awesome.min.css
-    |       |   |-- fonts
-    |       |       |-- FontAwesome.otf
-    |       |       |-- fontawesome-webfont.eot
-    |       |       |-- fontawesome-webfont.svg
-    |       |       |-- fontawesome-webfont.ttf
-    |       |       |-- fontawesome-webfont.woff
-    |       |       |-- fontawesome-webfont.woff2
-    |       |-- nucleo
-    |           |-- css
-    |           |   |-- nucleo-svg.css
-    |           |   |-- nucleo.css
-    |           |-- fonts
-    |               |-- nucleo-icons.eot
-    |               |-- nucleo-icons.svg
-    |               |-- nucleo-icons.ttf
-    |               |-- nucleo-icons.woff
-    |               |-- nucleo-icons.woff2
-    |-- components
-    |   |-- Badge.vue
-    |   |-- BaseButton.vue
-    |   |-- BaseCheckbox.vue
-    |   |-- BaseInput.vue
-    |   |-- BaseNav.vue
-    |   |-- BaseRadio.vue
-    |   |-- BaseSlider.vue
-    |   |-- BaseSwitch.vue
-    |   |-- Card.vue
-    |   |-- CloseButton.vue
-    |   |-- Icon.vue
-    |   |-- NavbarToggleButton.vue
-    |-- layout
-    |   |-- AppFooter.vue
-    |   |-- AppHeader.vue
-    |-- plugins
-    |   |-- argon-kit.js
-    |   |-- globalComponents.js
-    |   |-- globalDirectives.js
-    |-- views
-        |-- Components.vue
-        |-- Landing.vue
-        |-- Login.vue
-        |-- Profile.vue
-        |-- Register.vue
-        |-- components
-            |-- BasicElements.vue
-            |-- Carousel.vue
-            |-- CustomControls.vue
-            |-- DownloadSection.vue
-            |-- Examples.vue
-            |-- Hero.vue
-            |-- Icons.vue
-            |-- Inputs.vue
-            |-- JavascriptComponents.vue
-            |-- Navigation.vue
-
-</code></pre></div></div>
-
-<h2 id="browser-support">Browser Support</h2>
-
-<p>At present, we officially aim to support the last two versions of the following browsers:</p>
-
-<p><img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64" />
-<img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64" />
-<img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64" />
-<img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64" />
-<img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64" /></p>
-
-<h2 id="resources">Resources</h2>
-
-<ul>
-  <li>Demo: <a href="https://demos.creative-tim.com/argon-design-system">https://demos.creative-tim.com/vue-argon-design-system</a></li>
-  <li>Download: <a href="https://www.creative-tim.com/product/vue-argon-design-system">https://www.creative-tim.com/product/vue-argon-design-system</a></li>
-  <li>License Agreement: <a href="https://www.creative-tim.com/license">https://www.creative-tim.com/license</a></li>
-  <li>Support: <a href="https://www.creative-tim.com/contact-us">https://www.creative-tim.com/contact-us</a></li>
-  <li>Issues: <a href="https://github.com/creativetimofficial/vue-argon-design-system/issues">Github Issues Page</a></li>
-</ul>
-
-<h2 id="reporting-issues">Reporting Issues</h2>
-
-<p>We use GitHub Issues as the official bug tracker for the Vue Argon Design System. Here are some advices for our users that want to report an issue:</p>
-
-<ol>
-  <li>Make sure that you are using the latest version of the Vue Argon Design System. Check the CHANGELOG from your copy on our <a href="https://www.creative-tim.com">website</a>.</li>
-  <li>Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.</li>
-  <li>Some issues may be browser specific, so specifying in what browser you encountered the issue might help.</li>
-</ol>
-
-<h2 id="technical-support-or-questions">Technical Support or Questions</h2>
-
-<p>If you have questions or need help integrating the product please <a href="https://www.creative-tim.com/contact-us">contact us</a> instead of opening an issue.</p>
-
-<h2 id="licensing">Licensing</h2>
-
-<ul>
-  <li>
-    <p>Copyright © 2018 Creative Tim (https://www.creative-tim.com)</p>
-  </li>
-  <li>
-    <p>Licensed under MIT (https://github.com/creativetimofficial/vue-argon-design-system/blob/master/LICENSE.md)</p>
-  </li>
-</ul>
-
-<h2 id="useful-links">Useful Links</h2>
-
-<ul>
-  <li><a href="https://www.creative-tim.com/bootstrap-themes">More products</a> from Creative Tim</li>
-  <li><a href="https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w">Tutorials</a></li>
-  <li><a href="https://www.creative-tim.com/bootstrap-themes/free">Freebies</a> from Creative Tim</li>
-  <li><a href="https://www.creative-tim.com/affiliates/new">Affiliate Program</a> (earn money)</li>
-</ul>
-
-<h2 id="social-media">Social Media</h2>
-
-<ul>
-  <li>Twitter: <a href="https://twitter.com/CreativeTim">https://twitter.com/CreativeTim</a></li>
-  <li>Facebook: <a href="https://www.facebook.com/CreativeTim">https://www.facebook.com/CreativeTim</a></li>
-  <li>Dribbble: <a href="https://dribbble.com/creativetim">https://dribbble.com/creativetim</a></li>
-  <li>Google+: <a href="https://plus.google.com/+CreativetimPage">https://plus.google.com/+CreativetimPage</a></li>
-  <li>Instagram: <a href="https://www.instagram.com/CreativeTimOfficial">https://www.instagram.com/CreativeTimOfficial</a></li>
-</ul>
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
