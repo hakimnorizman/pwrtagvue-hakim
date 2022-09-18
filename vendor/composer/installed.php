@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '6a8afbd8c22b1f147b4a9c460dbf89b954a6878c',
+        'reference' => 'ed143759d70268e141a20fccf1d8b46a5b26c00f',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -370,7 +370,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '6a8afbd8c22b1f147b4a9c460dbf89b954a6878c',
+            'reference' => 'ed143759d70268e141a20fccf1d8b46a5b26c00f',
             'dev_requirement' => false,
         ),
         'laravel/pint' => array(
@@ -437,12 +437,12 @@
             'dev_requirement' => false,
         ),
         'league/flysystem' => array(
-            'pretty_version' => '3.4.0',
-            'version' => '3.4.0.0',
+            'pretty_version' => '3.5.0',
+            'version' => '3.5.0.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../league/flysystem',
             'aliases' => array(),
-            'reference' => '5972d2a966e236674286e3a2281139ce74e4415d',
+            'reference' => 'b7bb46dee497b57e0c378315f2a711824cb46c38',
             'dev_requirement' => false,
         ),
         'league/mime-type-detection' => array(

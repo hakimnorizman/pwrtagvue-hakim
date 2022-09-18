@@ -6,14 +6,16 @@ use Illuminate\View\Component;
 
 class RegistrationModal extends Component
 {
+    public $formTitle, $formSubtitle;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($formTitle, $formSubtitle)
     {
-        //
+        $this->formTitle = $formTitle;
+        $this->formSubtitle = $formSubtitle;
     }
 
     /**

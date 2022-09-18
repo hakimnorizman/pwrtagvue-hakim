@@ -1,4 +1,4 @@
-<div class="flex items-end justify-center min-h-screen px-4 text-center md:items-center sm:block sm:p-0">
+<div x-data="register" class="flex items-end justify-center min-h-screen px-4 text-center md:items-center sm:block sm:p-0">
     <div x-cloak @click="modelOpen = false" x-show="modelOpen" 
         x-transition:enter="transition ease-out duration-300 transform"
         x-transition:enter-start="opacity-0" 
@@ -16,10 +16,23 @@
         x-transition:leave="transition ease-in duration-200 transform"
         x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" 
         x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-        class="inline-block w-full max-w-xl p-8 my-20 overflow-hidden text-left transition-all transform bg-white rounded-lg shadow-xl 2xl:max-w-2xl"
+        class="inline-block w-full max-w-xl p-8 my-20 overflow-hidden text-left transition-all transform bg-white rounded-lg shadow-xl 2xl:max-w-2xl" 
+        :class="{ 'bg-green-300': status=='success' , 'bg-red-300' : status=='fail' }"
     >
         <div class="flex items-center justify-between space-x-4">
-            <h1 class="text-xl font-medium text-gray-800 ">Invite team memebr</h1>
+            <h1 x-show="status==null" class="text-xl font-medium text-gray-800 ">{{ $formTitle }}</h1>
+            <div x-show="status=='success'" class="flex text-lg text-green-700">
+                <svg class="w-6 h-6 inline mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+                <div>
+                    <span class="font-medium">Success!</span> Registration submitted.
+                </div>
+            </div>
+            <div x-show="status=='fail'" class="flex text-lg text-red-700">
+                <svg class="w-6 h-6 inline mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+                <div>
+                    <span class="font-medium">Error!</span> Please try again later.
+                </div>
+            </div>
 
             <button @click="modelOpen = false" class="text-gray-600 focus:outline-none hover:text-gray-700">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -28,71 +41,126 @@
             </button>
         </div>
 
-        <p class="mt-2 text-sm text-gray-500 ">
-            Add your teammate to your team and start work to get things done
+        <p x-show="status==null" class="mt-2 text-sm text-gray-500 ">
+            {{ $formSubtitle }}
         </p>
 
-        <form class="mt-5">
+        <form x-show="status==null" class="mt-5">
             <div>
-                <label for="user name" class="block text-sm text-gray-700 capitalize dark:text-gray-200">Teammate name</label>
-                <input placeholder="Arthur Melo" type="text" class="block w-full px-3 py-2 mt-2 text-gray-600 placeholder-gray-400 bg-white border border-gray-200 rounded-md focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-40">
+                <label for="user name" class="block text-sm text-gray-700 capitalize dark:text-gray-600">Name</label>
+                <input x-model="name" placeholder="Arthur Melo" type="text" class="block w-full px-3 py-2 mt-2 text-gray-600 placeholder-gray-400 bg-white border border-gray-200 rounded-md focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-40">
             </div>
 
             <div class="mt-4">
-                <label for="email" class="block text-sm text-gray-700 capitalize dark:text-gray-200">Teammate email</label>
-                <input placeholder="arthurmelo@example.app" type="email" class="block w-full px-3 py-2 mt-2 text-gray-600 placeholder-gray-400 bg-white border border-gray-200 rounded-md focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-40">
+                <label for="gym name" class="block text-sm text-gray-700 capitalize dark:text-gray-600">Gym name</label>
+                <input x-model="gymName" placeholder="Arthur " type="text" class="block w-full px-3 py-2 mt-2 text-gray-600 placeholder-gray-400 bg-white border border-gray-200 rounded-md focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-40">
+            </div>
+
+            <div class="mt-4">
+                <label for="ic" class="block text-sm text-gray-700 capitalize dark:text-gray-600">IC</label>
+                <input 
+                    x-model="ic" 
+                    placeholder="IC number" 
+                    type="text" 
+                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" 
+                    class="block w-full px-3 py-2 mt-2 text-gray-600 placeholder-gray-400 bg-white border border-gray-200 rounded-md focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-40"
+                    :class="{ 'focus:border-red-300 focus:ring-red-300' : !validateIc(ic), 'focus:border-green-300 focus:ring-green-300' : validateIc(ic)}"
+                >                
+            </div>
+
+            <div class="mt-4">
+                <label for="email" class="block text-sm text-gray-700 capitalize dark:text-gray-600">Email</label>
+                <input x-model="email" placeholder="arthurmelo@example.app" type="email" 
+                class="block w-full px-3 py-2 mt-2 text-gray-600 placeholder-gray-400 bg-white border border-gray-200 rounded-md focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-40"
+                :class="{ 'focus:border-red-300 focus:ring-red-300' : !validateEmail(email), 'focus:border-green-300 focus:ring-green-300' : validateEmail(email)}">
+            </div>
+
+            <div class="mt-4">
+                <label for="gender" class="block text-sm text-gray-700 capitalize dark:text-gray-600 mb-2">Gender</label>
+                <button 
+                    @click="updateGender('male')"
+                    class="px-3 py-2 text-sm tracking-wide text-indigo-600 capitalize transition-colors duration-200 transform bg-white rounded-md border-2 border-indigo-600 hover:font-bold"
+                    :class="{ 'bg-indigo-600 text-white': gender=='male' }"
+                >Male</button>
+                <button 
+                    @click="updateGender('female')"
+                    class="px-3 py-2 text-sm tracking-wide text-indigo-600 capitalize transition-colors duration-200 transform bg-white rounded-md border-2 border-indigo-600 hover:font-bold"
+                    :class="{ 'bg-indigo-600 text-white': gender=='female' }"
+                >Female</button>
             </div>
             
             <div class="mt-4">
-                <h1 class="text-xs font-medium text-gray-400 uppercase">Permissions</h1>
-
-                <div class="mt-4 space-y-5">
-                    <div class="flex items-center space-x-3 cursor-pointer" x-data="{ show: true }" @click="show =!show">
-                        <div class="relative w-10 h-5 transition duration-200 ease-linear rounded-full"
-                            :class="[show ? 'bg-indigo-500' : 'bg-gray-300']">
-                            <label for="show"
-                                @click="show =!show"
-                                class="absolute left-0 w-5 h-5 mb-2 transition duration-100 ease-linear transform bg-white border-2 rounded-full cursor-pointer"
-                                :class="[show ? 'translate-x-full border-indigo-500' : 'translate-x-0 border-gray-300']"></label>
-                            <input type="checkbox" name="show" class="hidden w-full h-full rounded-full appearance-none active:outline-none focus:outline-none"/>
-                        </div>
-
-                        <p class="text-gray-500">Can make task</p>
-                    </div>
-
-                    <div class="flex items-center space-x-3 cursor-pointer" x-data="{ show: false }" @click="show =!show">
-                        <div class="relative w-10 h-5 transition duration-200 ease-linear rounded-full"
-                            :class="[show ? 'bg-indigo-500' : 'bg-gray-300']">
-                            <label for="show"
-                                @click="show =!show"
-                                class="absolute left-0 w-5 h-5 mb-2 transition duration-100 ease-linear transform bg-white border-2 rounded-full cursor-pointer"
-                                :class="[show ? 'translate-x-full border-indigo-500' : 'translate-x-0 border-gray-300']"></label>
-                            <input type="checkbox" name="show" class="hidden w-full h-full rounded-full appearance-none active:outline-none focus:outline-none"/>
-                        </div>
-
-                        <p class="text-gray-500">Can delete task</p>
-                    </div>
-
-                    <div class="flex items-center space-x-3 cursor-pointer" x-data="{ show: true }" @click="show =!show">
-                        <div class="relative w-10 h-5 transition duration-200 ease-linear rounded-full"
-                            :class="[show ? 'bg-indigo-500' : 'bg-gray-300']">
-                            <label for="show"
-                                @click="show =!show"
-                                class="absolute left-0 w-5 h-5 mb-2 transition duration-100 ease-linear transform bg-white border-2 rounded-full cursor-pointer"
-                                :class="[show ? 'translate-x-full border-indigo-500' : 'translate-x-0 border-gray-300']"></label>
-                            <input type="checkbox" name="show" class="hidden w-full h-full rounded-full appearance-none active:outline-none focus:outline-none"/>
-                        </div>
-
-                        <p class="text-gray-500">Can edit task</p>
-                    </div>
-                </div>
+                <label for="weight" class="block text-sm text-gray-700 capitalize dark:text-gray-600">Weight</label>
+                <input x-model="weight" placeholder="in Kg" type="number" class="block md:w-2/5 w-full px-3 py-2 mt-2 text-gray-600 placeholder-gray-400 bg-white border border-gray-200 rounded-md focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-40">
             </div>
             
             <div class="flex justify-end mt-6">
-                <button type="button" class="px-3 py-2 text-sm tracking-wide text-white capitalize transition-colors duration-200 transform bg-indigo-500 rounded-md dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:bg-indigo-700 hover:bg-indigo-600 focus:outline-none focus:bg-indigo-500 focus:ring focus:ring-indigo-300 focus:ring-opacity-50">
-                    Invite Member
+                <button @click="createPost" type="button" class="px-3 py-2 text-sm tracking-wide text-white capitalize transition-colors duration-200 transform bg-indigo-500 rounded-md dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:bg-indigo-700 hover:bg-indigo-600 focus:outline-none focus:bg-indigo-500 focus:ring focus:ring-indigo-300 focus:ring-opacity-50">
+                    Submit
                 </button>
             </div>
         </form>
     </div>
 </div>
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('register', () => ({
+            open: false,
+            name: '',
+            gymName: '',
+            ic:'',
+            email: '',
+            status: null,
+            gender:null,
+            weight: 0,
+ 
+            async createPost() {
+                this.newpost = await (await fetch('/register', {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        name: this.name,
+                        gymName: this.gymName,
+                        ic: this.ic,
+                        email: this.email,
+                        gender: this.gender,
+                        weight: this.weight,
+                    }),
+                    headers: {
+                        'Content-type': 'application/json; charset=UTF-8',
+                        'X-CSRF-TOKEN': document.head.querySelector('meta[name=csrf-token]').content
+                    },
+                })).json();
+
+                if(this.newpost == 202) {
+                    this.status = 'success';
+                }
+                else {
+                    this.status = 'fail';
+                }
+                    
+            },
+
+            validateIc(ic) {
+                if((ic.length > 1 && ic.length < 12) || ic.length > 12 )
+                    return false ;
+                else return true;
+            },
+
+            validateEmail(email) {
+                var re = /\S+@\S+\.\S+/;
+                return re.test(email);
+            },
+
+            updateGender(gender) {
+                if(this.gender == null || this.gender != gender) {
+                    this.gender = gender;                    
+                }
+                else if(this.gender == gender){
+                    this.gender = null;
+                }
+
+                console.log(this.gender)
+            }
+        }))
+    })
+</script>

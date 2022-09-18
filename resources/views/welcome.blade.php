@@ -2,6 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
     <meta charset="utf-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   @vite('resources/css/app.css')
 
@@ -112,7 +113,9 @@
         buttonColor="indigo-600"/>
     
         <div x-show='modelOpen' class="fixed inset-0 z-50 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-                <x-registration-modal />
+                <x-registration-modal 
+                    formTitle="Registration form"
+                    formSubtitle="Add your information and start work to get things done"/>
             </div>
         
     <!-- HERO SECTION END -->
@@ -124,7 +127,7 @@
     <!-- END FEATURES SECTION -->
 
     <!-- Pricing Section -->
-    <div class="relative px-8 py-10 bg-white border-t border-gray-200 md:py-16 lg:py-24 xl:py-40 xl:px-0">
+    <!-- <div class="relative px-8 py-10 bg-white border-t border-gray-200 md:py-16 lg:py-24 xl:py-40 xl:px-0">
 
         <div id="pricing" class="container flex flex-col items-center h-full max-w-6xl mx-auto">
             <h2 class="my-5 text-base font-medium tracking-tight text-indigo-500 uppercase">Our Pricing</h2>
@@ -133,7 +136,7 @@
                 Simple, Transparent Pricing for Everyone</h3>
 
             <div class="max-w-full mx-auto md:max-w-6xl sm:px-8">
-                <!-- Basic Pricing -->
+
                 <div class="relative flex flex-col items-center block sm:flex-row">
                     <div
                         class="relative z-0 w-11/12 max-w-sm my-8 border border-gray-200 rounded-lg sm:w-3/5 lg:w-1/3 sm:my-5 md:-mr-4">
@@ -194,7 +197,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Pro Pricing -->
+
                     <div
                         class="relative z-10 w-full max-w-md my-8 bg-white rounded-lg shadow-lg sm:w-2/3 lg:w-1/3 sm:my-5">
                         <div
@@ -254,7 +257,7 @@
                                 This Plan</a>
                         </div>
                     </div>
-                    <!-- Premium Pricing -->
+
                     <div
                         class="relative z-0 w-11/12 max-w-sm my-8 rounded-lg shadow-lg sm:w-3/5 lg:w-1/3 sm:my-5 md:-ml-4">
                         <div class="overflow-hidden text-black bg-white rounded-lg shadow-lg shadow-inner">
@@ -319,12 +322,12 @@
 
         </div>
 
-    </div>
+    </div> -->
     <!-- End Pricing Section -->
 
     <!-- Start Testimonials -->
     <div id="testimonials"
-        class="flex items-center justify-center w-full px-8 py-10 border-t border-gray-200 md:py-16 lg:py-24 xl:py-40 xl:px-0">
+        class="flex items-center justify-center w-full px-8 py-10 md:py-16 lg:py-24 xl:py-40 xl:px-0">
         <div class="max-w-6xl mx-auto">
             <div class="flex-col items-center ">
                 <div class="flex flex-col items-center justify-center w-full h-full max-w-2xl pr-8 mx-auto text-center">

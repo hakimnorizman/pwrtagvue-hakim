@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PwrtagController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::post('/register', [PwrtagController::class, 'register']);
