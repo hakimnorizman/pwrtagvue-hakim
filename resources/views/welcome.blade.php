@@ -541,7 +541,7 @@
     <script>
         document.addEventListener('alpine:init', () => {
         Alpine.data('body', () => ({
-            modelOpen: true,
+            modelOpen: false,
  
             modalToggle() {
                 this.modelOpen = ! this.modelOpen
