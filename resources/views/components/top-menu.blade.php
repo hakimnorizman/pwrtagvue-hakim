@@ -3,11 +3,11 @@
     <a href="#"
         class="ml-0 mr-0 font-bold duration-100 md:ml-12 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">Home</a>
     <a href="#features"
-        class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">Features</a>
+        class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">About Us</a>
     <a href="#pricing"
-        class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">Pricing</a>
+        class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">Events</a>
     <a href="#testimonials"
-        class="font-bold duration-100 transition-color hover:text-indigo-600">Testimonials</a>
+        class="font-bold duration-100 transition-color hover:text-indigo-600">Gallery</a>
     <div class="flex flex-col block w-full font-medium border-t border-gray-200 md:hidden">
         <a href="#_" @click="$dispatch('modal')"
             class="relative inline-block w-full px-5 py-3 text-sm leading-none text-center text-white bg-indigo-700 fold-bold">Register</a>
