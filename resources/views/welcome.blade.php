@@ -65,8 +65,8 @@
             
             <div
                 class="absolute left-0 flex-col items-center justify-center hidden w-full pb-8 mt-48 border-b border-gray-200 md:relative md:w-auto md:bg-transparent md:border-none md:mt-0 md:flex-row md:p-0 md:items-end md:flex md:justify-between">
-                <!-- <a href="#_"
-                    class="relative z-40 px-3 py-2 mr-0 text-sm font-bold text-pink-500 md:px-5 lg:text-white sm:mr-3 md:mt-0">Login</a> -->
+                <a href="#_"
+                    class="relative z-40 px-3 py-2 mr-0 text-sm font-bold text-pink-500 md:px-5 lg:text-white sm:mr-3 md:mt-0">Login</a>
                 <a href="#_" @click="modalToggle()"
                     class="relative z-40 inline-block w-auto h-full px-5 py-3 text-sm font-bold leading-none text-white transition-all transition duration-100 duration-300 bg-indigo-700 rounded shadow-md fold-bold lg:bg-white lg:text-indigo-700 sm:w-full lg:shadow-none hover:shadow-xl">Register</a>
                 <svg class="absolute top-0 left-0 hidden w-screen max-w-3xl -mt-64 -ml-12 lg:block"
@@ -120,9 +120,9 @@
 
     <!-- BEGIN HERO SECTION -->
     <x-top-content 
-        mainTitle="Unleash Your Power!"
+        mainTitle="Build the Next Great Thing"
         titleColor="gray-100"
-        subTitle="Let's make it BIGGER"
+        subTitle="Are you ready to start your adventure and start building the next greatest SAAS app on the market?"
         buttonText="Sign Up Today"
         buttonColor="indigo-600"/>
     
@@ -136,7 +136,7 @@
 
     <!-- BEGIN FEATURES SECTION -->
     <x-banner 
-        title="EVENT COUNTDOWN"
+        title="Built and Designed with you in Mind"
         titleColor="gray-100"/>
     <!-- END FEATURES SECTION -->
 
@@ -345,12 +345,15 @@
         <div class="max-w-6xl mx-auto">
             <div class="flex-col items-center ">
                 <div class="flex flex-col items-center justify-center w-full h-full max-w-2xl pr-8 mx-auto text-center">
-                    <p class="my-5 text-base font-medium tracking-tight text-indigo-500 uppercase">Create Your Signature Tag With Us!
+                    <p class="my-5 text-base font-medium tracking-tight text-indigo-500 uppercase">Our customers love
+                        our product
                     </p>
                     <h2
-                        class="text-4xl font-extrabold leading-10 tracking-tight text-gray-100 sm:text-5xl sm:leading-none md:text-6xl lg:text-5xl xl:text-6xl">
-                        HALL OF FAME</h2>
-                    <p class="my-6 text-xl font-medium text-gray-500">Prove that you are worthy to be in HANMA CLAN!</p>
+                        class="text-4xl font-extrabold leading-10 tracking-tight text-gray-900 sm:text-5xl sm:leading-none md:text-6xl lg:text-5xl xl:text-6xl">
+                        Testimonials</h2>
+                    <p class="my-6 text-xl font-medium text-gray-500">Don't just take our word for it, read from our
+                        extensive
+                        list of case studies and customer testimonials.</p>
 
                 </div>
                 <div class="flex flex-col items-center justify-center max-w-2xl py-8 mx-auto xl:flex-row xl:max-w-full">

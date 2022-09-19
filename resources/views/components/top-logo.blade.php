@@ -1,5 +1,5 @@
 <div>
-    <!-- <a href="/" class="relative flex items-center inline-block h-5 h-full font-black leading-none">
+    <a href="/" class="relative flex items-center inline-block h-5 h-full font-black leading-none">
         <svg class="w-auto h-6 text-indigo-600 fill-current" viewBox="0 0 194 116"
             xmlns="http://www.w3.org/2000/svg">
             <g fill-rule="evenodd">
@@ -9,6 +9,5 @@
             </g>
         </svg>
         <span class="ml-3 text-xl text-gray-100">PWRTAG<span class="text-pink-500">.</span></span>
-    </a> -->
-    <img class="w-48 h-36" src="{{ asset('storage/neon20logo201.webp')}}">
+    </a>
 </div>
