@@ -15,11 +15,11 @@
                     </svg>
                 </span>
             </a>
-            <p class="mt-6 mr-4 text-base text-gray-500">{{ $leftInfo }}
+            <p class="mt-6 mr-4 text-base text-start text-gray-500">{{ $leftInfo }}
             </p>
         </div>
         <div class="block w-full pl-10 mt-6 text-sm lg:w-3/4 sm:flex lg:mt-0">
-            <ul class="flex flex-col w-full p-0 font-medium text-left text-gray-700 list-none">
+            <!-- <ul class="flex flex-col w-full p-0 font-medium text-left text-gray-700 list-none">
                 <li class="inline-block px-3 py-2 mt-5 font-bold tracking-wide text-gray-800 uppercase md:mt-0">
                     Product</li>
                 <li><a href="#_"
@@ -33,18 +33,17 @@
                 </li>
                 <li><a href="#_"
                         class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">FAQ</a></li>
-            </ul>
-            <ul class="flex flex-col w-full p-0 font-medium text-left text-gray-700 list-none">
+            </ul> -->
+            <ul class="flex flex-col w-full p-0 font-medium text-center text-gray-700 list-none">
                 <li class="inline-block px-3 py-2 mt-5 font-bold tracking-wide text-gray-800 uppercase md:mt-0">
                     Company</li>
                 <li><a href="#_"
                         class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Privacy</a>
                 </li>
-                <li><a href="#_" class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Terms
-                        of
-                        Service</a></li>
+                <li><a href="#_" class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Terms of Service
+                    </a></li>
             </ul>
-            <ul class="flex flex-col w-full p-0 font-medium text-left text-gray-700 list-none">
+            <!-- <ul class="flex flex-col w-full p-0 font-medium text-left text-gray-700 list-none">
                 <li class="inline-block px-3 py-2 mt-5 font-bold tracking-wide text-gray-800 uppercase md:mt-0">
                     TailwindCSS
                 </li>
@@ -56,11 +55,11 @@
                         Templates</a></li>
                 <li><a href="https://devdojo.com/tails"
                         class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Tails</a></li>
-            </ul>
+            </ul> -->
             <x-footer.follow-us />
         </div>
     </div>
     <div class="pt-4 pt-6 mt-10 text-center text-gray-500 border-t border-gray-100">{{ $trademark }}</div>
 
-        <div class="pt-2 pt-4 mt-2 text-center text-gray-600 border-t border-gray-100">Distributed By <a href="https://themewagon.com/">Themewagon</a></div>
+        <!-- <div class="pt-2 pt-4 mt-2 text-center text-gray-600 border-t border-gray-100">Distributed By <a href="https://themewagon.com/">Themewagon</a></div> -->
 </footer>
